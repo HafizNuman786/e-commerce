@@ -1,22 +1,22 @@
-import {Button, Container} from '@mui/material';
+import { Button, Container } from '@mui/material';
 import { useEffect } from 'react';
-import {ThemeProvider} from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import theme from './styles/theme';
-import {Appbar} from './component/index'
+import {Appbar}  from './component/Appbar/index'
 
 
 function App() {
-  useEffect(()=>{
-      document.title="E-commerce ALH "
-  },[]);
+  useEffect(() => {
+    document.title = "E-commerce ALH "
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
-    <Container maxWidth="xl" sx={{backgroundColor:"#fff"}}>
-      <Button variant="contained">numan</Button>
-      <Appbar/>
-   </Container>
-   </ThemeProvider>
+      <Container maxWidth="xl" sx={{ backgroundColor: "#fff" }}>
+        {/* <Button variant="contained">numan</Button> */}
+        <Appbar/>
+      </Container>
+    </ThemeProvider>
   );
 }
 

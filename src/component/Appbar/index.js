@@ -10,7 +10,7 @@ export function Appbar() {
 
   return (
     <>
-      {matches ? <AppbarMobile matches={matches}/> : <AppbarDesktop matches={matches}/>}
+      {matches ? <AppbarMobile matches={matches} /> : <AppbarDesktop matches={matches} />}
     </>
   );
 }
