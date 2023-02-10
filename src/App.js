@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {Button, Container} from '@mui/material';
+import { useEffect } from 'react';
+import {ThemeProvider} from '@mui/material';
+import theme from './styles/theme';
+import {Appbar} from './component/index'
+
 
 function App() {
+  useEffect(()=>{
+      document.title="E-commerce ALH "
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Container maxWidth="xl" sx={{backgroundColor:"#fff"}}>
+      <Button variant="contained">numan</Button>
+      <Appbar/>
+   </Container>
+   </ThemeProvider>
   );
 }
 
